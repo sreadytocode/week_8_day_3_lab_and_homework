@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+
+const Title = styled.h1`
+    text-align: center;
+`
 
 const Header = ({text}) => {
     return ( 
-        <h1>{text}</h1>
+        <Title>{text}</Title>
      );
 }
  

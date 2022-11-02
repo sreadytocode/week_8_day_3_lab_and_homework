@@ -7,7 +7,7 @@ const Basket = ({user, basket, removeItem}) => {
         return (
             <>
             <p>{items.name}</p>
-            <Button text="Delete" clickHandler={removeItem}/>
+            <Button text="Delete from basket" clickHandler={removeItem}/>
             </>
         )
     })
