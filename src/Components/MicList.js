@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "../Components/Button.js"
+import Button from "../Components/Button.js";
+import Header from "./Header.js";
 
 const MicList = ({items, addToBasketClickity}) => {
 
@@ -19,6 +20,7 @@ const MicList = ({items, addToBasketClickity}) => {
 
     return ( 
         <div>
+            <Header text="All Microphones"/>
             {Items}
             
         </div>
