@@ -5,10 +5,13 @@ import styled from "styled-components";
 
 const MicList = ({items, addToBasketClickity}) => {
 
-    const ItemList = styled.h2`
+    const ButtonContainer = styled.div`
     display: flex;
-    
-    margin: 0;
+    justify-content: space-evenly;
+    padding: 1em;
+    `
+    const Container = styled.div`
+        border: solid;
     `
 
     function handlerBasket(evt) {
@@ -18,19 +21,19 @@ const MicList = ({items, addToBasketClickity}) => {
 
     const Items = items.map((item, index) => {
         return (
-            <div>
-            <ItemList key={index}>{item.name}</ItemList>
+            <ButtonContainer>
+            <h2 key={index}>{item.name}</h2>
             <Button text="Add to Basket" value={index} clickHandler={handlerBasket}/>
-            </div>
+            </ButtonContainer>
         )
     })
 
     return ( 
-        <>
+        <Container>
             <Header text="Microphone List:"/>
             {Items}
             
-        </>
+        </Container>
      );
 }
  
